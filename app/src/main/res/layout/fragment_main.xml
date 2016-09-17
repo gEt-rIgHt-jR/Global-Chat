@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainFragment">
+    tools:context=".MainFragment"
+    style="@style/AppTheme">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/messages"
@@ -13,35 +14,36 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:scrollbarStyle="outsideOverlay"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"
+        android:backgroundTint="@color/colorPrimary" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <EditText
             android:id="@+id/message_input"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:paddingStart="7dp"
+            android:paddingBottom="15dp"
             android:hint="@string/prompt_message"
             android:imeActionId="@+id/send"
             android:imeActionLabel="@string/action_send"
             android:imeOptions="actionSend"
-            android:inputType="text"
-            android:maxLines="1"
-            android:singleLine="true" />
+            android:backgroundTint="@color/colorAccent" />
 
         <ImageButton
             android:id="@+id/send_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/action_send"
-            android:src="@android:drawable/ic_menu_send"
+            android:src="@drawable/ic_menu_send"
             android:onClick="send"/>
 
     </LinearLayout>

@@ -1,6 +1,5 @@
 package com.aastudio.globalchat;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -8,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.view.ContextThemeWrapper;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
@@ -146,15 +146,9 @@ public class MainFragment extends Fragment {
 
     }
 
-    public void send(View view) {
-
-    }
-
     @Override
     public void onDestroy() {
         super.onDestroy();
-
-        Toast.makeText(getActivity(), "OnDestroy", Toast.LENGTH_SHORT).show();
 
         if (mSocket == null)
             return;
@@ -175,18 +169,13 @@ public class MainFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         inflater.inflate(R.menu.menu_main, menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_leave) {
             leave();
             return true;
@@ -245,7 +234,6 @@ public class MainFragment extends Fragment {
         mInputMessageView.setText("");
         addMessage(mUsername, message);
 
-        // perform the sending message attempt.
         mSocket.emit("new message", message);
     }
 
