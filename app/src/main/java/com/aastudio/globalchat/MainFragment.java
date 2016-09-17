@@ -1,5 +1,6 @@
 package com.aastudio.globalchat;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -93,6 +95,7 @@ public class MainFragment extends Fragment {
         mMessagesView.setAdapter(mAdapter);
 
         mInputMessageView = (EditText) view.findViewById(R.id.message_input);
+        mInputMessageView.setEnabled(false);
         mInputMessageView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int id, KeyEvent event) {
@@ -324,6 +327,11 @@ public class MainFragment extends Fragment {
                     mAdapter.notifyItemRemoved(0);
                     addLog(getResources().getString(R.string.message_welcome));
                     addParticipantsLog(numUsers);
+                    mInputMessageView.setEnabled(true);
+                    mInputMessageView.requestFocus();
+                    InputMethodManager inputMethodManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                    if (inputMethodManager != null)
+                        inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
                 }
             });
         }

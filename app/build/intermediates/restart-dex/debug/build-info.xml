@@ -4,55 +4,31 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="122433976977483" >
+    timestamp="124617770442568" >
 
     <task
         name="javac"
-        duration="532" />
+        duration="486" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="116" />
+        duration="89" />
     <task
         name="verifier"
-        duration="26" />
+        duration="29" />
 
-    <artifact
-        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\res\resources-debug.ap_"
-        type="RESOURCES" />
-    <artifact
-        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
-        type="DEX" />
-    <artifact
-        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-        type="DEX" />
-    <artifact
-        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-        type="DEX" />
     <artifact
         location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
         type="DEX" />
 
-    <build timestamp="117135940156987" >
+    <build timestamp="123733124270986" >
         <artifact
             location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="122433976977483" >
-        <artifact
-            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-            type="DEX" />
+    <build timestamp="124617770442568" >
         <artifact
             location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
             type="DEX" />
