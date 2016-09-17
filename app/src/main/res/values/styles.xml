@@ -19,7 +19,7 @@
 
     <style name="JoinButton" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/green</item>
-        <item name="colorButtonNormal">@color/mb_blue</item>
+        <item name="colorButtonNormal">@color/colorPrimary</item>
     </style>
 
 </resources>

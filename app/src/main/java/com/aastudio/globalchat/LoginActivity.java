@@ -1,9 +1,11 @@
 package com.aastudio.globalchat;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -11,6 +13,9 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -21,6 +26,15 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        //MobileAds.initialize(getApplicationContext(), getString(R.string.banner_home_footer));
+        AdView mAdView = (AdView) findViewById(R.id.home_banner_ad);
+        //AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators
+                .addTestDevice("AC98C820A50B4AD8A2106EDE96FB87D4")  // An example device ID
+                .build();
+        mAdView.loadAd(adRequest);
 
         mUsernameView = (EditText) findViewById(R.id.username_input);
         mUsernameView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -38,8 +52,18 @@ public class LoginActivity extends AppCompatActivity {
     public void join(View view) {
         if (!checkInput())
             return;
-        if (!checkInternet())
+        if (!checkInternet()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage(R.string.no_internet).setTitle("No Internet");
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
             return;
+        }
 
         Intent intent = new Intent(getApplication(), MainActivity.class);
         intent.putExtra("username", mUsername);

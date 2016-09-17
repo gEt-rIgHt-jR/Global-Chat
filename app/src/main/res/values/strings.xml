@@ -19,5 +19,10 @@
     <string name="message_user_joined">%s joined</string>
     <string name="message_user_left">%s left</string>
     <string name="user_action_typing">is typing</string>
+    <string name="no_internet">Please check your internet connection</string>
+
+    <!--ads-->
+    <string name="banner_home_footer">ca-app-pub-5355915294229634/6623942703</string>
+    <string name="interstitial_ad">ca-app-pub-5355915294229634/7821474307</string>
 
 </resources>

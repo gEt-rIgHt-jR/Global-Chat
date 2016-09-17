@@ -4,29 +4,58 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="89377570381043" >
+    timestamp="122433976977483" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="532" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="116" />
     <task
         name="verifier"
-        duration="0" />
+        duration="26" />
 
     <artifact
-        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+        type="DEX" />
 
-    <build timestamp="89377570381043" >
+    <build timestamp="117135940156987" >
         <artifact
             location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="122433976977483" >
+        <artifact
+            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

@@ -1,13 +1,11 @@
 package com.aastudio.globalchat;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.view.ContextThemeWrapper;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
@@ -26,14 +24,17 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import io.socket.client.Socket;
-import io.socket.emitter.Emitter;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
 
 public class MainFragment extends Fragment {
 
@@ -52,17 +53,33 @@ public class MainFragment extends Fragment {
 
     private Boolean isConnected = true;
 
+    InterstitialAd mInterstitialAd;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setHasOptionsMenu(true);
 
+        mInterstitialAd = new InterstitialAd(getActivity());
+        mInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad));
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators
+                .addTestDevice("AC98C820A50B4AD8A2106EDE96FB87D4")  // An example device ID
+                .build();
+        mInterstitialAd.loadAd(adRequest);
+        //AdRequest adRequest = new AdRequest.Builder().build();
+
         Intent intent = getActivity().getIntent();
         mUsername = intent.getStringExtra("username");
 
         mAdapter = new MessageAdapter(getActivity(), mMessages);
+    }
 
+    private void showInterstitial() {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }
     }
 
     @Override
@@ -184,6 +201,13 @@ public class MainFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
+    public void leave() {
+        mUsername = null;
+        mSocket.disconnect();
+        getActivity().finish();
+        showInterstitial();
+    }
+
     private void addLog(String message) {
         mMessages.add(new Message.Builder(Message.TYPE_LOG)
                 .message(message).build());
@@ -235,12 +259,6 @@ public class MainFragment extends Fragment {
         addMessage(mUsername, message);
 
         mSocket.emit("new message", message);
-    }
-
-    private void leave() {
-        mUsername = null;
-        mSocket.disconnect();
-        getActivity().finish();
     }
 
     private void scrollToBottom() {
