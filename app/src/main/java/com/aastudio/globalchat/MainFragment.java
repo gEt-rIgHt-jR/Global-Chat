@@ -63,12 +63,8 @@ public class MainFragment extends Fragment {
 
         mInterstitialAd = new InterstitialAd(getActivity());
         mInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad));
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators
-                .addTestDevice("AC98C820A50B4AD8A2106EDE96FB87D4")  // An example device ID
-                .build();
+        AdRequest adRequest = new AdRequest.Builder().build();
         mInterstitialAd.loadAd(adRequest);
-        //AdRequest adRequest = new AdRequest.Builder().build();
 
         Intent intent = getActivity().getIntent();
         mUsername = intent.getStringExtra("username");
