@@ -15,12 +15,13 @@
         name="com.aastudio.globalchat.ChatApplication"
         android:name="com.android.tools.fd.runtime.BootstrapApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.aastudio.globalchat.LoginActivity"
+            android:label="@string/title_activity_login"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize|stateVisible" >
             <intent-filter>
@@ -31,8 +32,7 @@
         </activity>
         <activity
             android:name="com.aastudio.globalchat.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme" >
+            android:label="@string/app_name" >
         </activity>
     </application>
 

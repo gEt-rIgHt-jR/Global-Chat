@@ -4,11 +4,11 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="109153025996384" >
+    timestamp="89377570381043" >
 
     <task
         name="javac"
-        duration="490" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
@@ -20,34 +20,13 @@
         duration="0" />
 
     <artifact
-        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\res\resources-debug.ap_"
-        type="RESOURCES" />
+        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="108671381074935" >
+    <build timestamp="89377570381043" >
         <artifact
             location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="109022672286580"
-        verifier="R_CLASS_CHANGE" >
-        <artifact
-            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-            type="DEX" />
-    </build>
-    <build timestamp="109153025996384" >
-        <artifact
-            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
     </build>
 
 </instant-run>

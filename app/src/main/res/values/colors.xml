@@ -4,6 +4,7 @@
     <color name="colorPrimary">#029acc</color>
     <color name="colorPrimaryDark">#029acc</color>
     <color name="colorAccent">#029acc</color>
+    <color name="white">#FFFFFF</color>
     <color name="green">#02c48d</color>
 
     <color name="username0">#e21400</color>
