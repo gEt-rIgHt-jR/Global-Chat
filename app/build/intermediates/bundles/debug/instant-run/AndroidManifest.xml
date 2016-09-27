@@ -34,7 +34,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.aastudio.globalchat.LoginActivity"
-            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize|stateVisible" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,6 +46,7 @@
         <activity
             android:name="com.aastudio.globalchat.MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >
         </activity>
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->

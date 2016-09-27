@@ -1,37 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
+    abi="x86"
     api-level="23"
-    density="xxhdpi"
+    density="xhdpi"
     format="7"
-    timestamp="124617770442568" >
+    timestamp="123920432844558" >
 
     <task
         name="javac"
-        duration="486" />
+        duration="22375" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="89" />
+        duration="2334" />
     <task
         name="verifier"
-        duration="29" />
+        duration="871" />
 
     <artifact
-        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-        type="DEX" />
+        location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="123733124270986" >
+    <build timestamp="123920432844558" >
         <artifact
             location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build timestamp="124617770442568" >
-        <artifact
-            location="C:\Users\Abhidnya\Main\Programming\AndrodApps\Projects\GlobalChat\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>
